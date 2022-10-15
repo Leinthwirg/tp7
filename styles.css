@@ -1,0 +1,107 @@
+
+h1 {
+  font-family: Sansita, sans-serif;
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  font-family: Sansita, sans-serif;
+  margin-bottom: 0;
+  font-style: bold;
+}
+
+ul,
+ol {
+  margin-top: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.copyright {
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: italic;
+  background-color: lightgray;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+div#SteakBanner {
+  background-image: url(images/steak.jpg);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  position: relative;
+  top: 0;
+  left 0;
+  width: 100vw;
+  height: 75vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#SteakBanner h1 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: Poppins;
+  font-size: 500%;
+}
+
+#SteakBanner h1.tp {
+  font-size: 250%;
+}
+#SteakBanner h1.black {
+  color: black;
+}
+
+
+#ingredients {
+  background-color: white;
+  box-sizing: border-box;
+}
+
+#equipment {
+  background-color: white;
+  box-sizing: border-box;
+}
+
+#directions {
+  background-color: white;
+  box-sizing: border-box;
+}
+
+#recipeColumns #ingredients ul,
+#recipeColumns #equipment ul,
+#recipeColumns #directions ol { 
+  display: none; 
+}
+
+#recipeColumns #ingredients.tpShow ul,
+#recipeColumns #equipment.tpShow ul,
+#recipeColumns #directions.tpShow ol {
+  display: block;
+  
+}
+
+@media (orientation: landscape) {
+  div {
+    width: calc(98vw/3);
+    float: left;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 575px) {
+  div#SteakBanner {
+    height: 25vh;
+  }
+}
+li {
+  font-family: Poppins;
+}
