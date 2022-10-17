@@ -22,18 +22,23 @@ body {
   margin: 0;
 }
 
-.copyright {
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: italic;
-  background-color: lightgray;
+#nav {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  height: 2rem;
+  background-color: #ccc;
+  padding: 8px;
+  display: block;
+  font-family: Poppins, bold;
+}
+
+#nav a {
+  font-size: 120%;
+  text-decoration: none;
+  padding-right: 1rem;
 }
 
 div#SteakBanner {
-  background-image: url(images/steak.jpg);
+  background-image: url(https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);
   margin: 0;
   padding: 0;
   border: 0;
@@ -41,14 +46,16 @@ div#SteakBanner {
   position: relative;
   top: 0;
   left 0;
-  width: 100vw;
+  width: 100%;
   height: 75vh;
   background-size: cover;
   background-attachment: fixed;
 }
 
 #SteakBanner h1 {
-  padding: 0;
+  text-align: center;
+  padding: 150px;
+  text-shadow: 2px 2px 4px #000000;
   margin: 0;
   color: white;
   font-family: Poppins;
@@ -60,48 +67,55 @@ div#SteakBanner {
 }
 #SteakBanner h1.black {
   color: black;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+#SteakBanner h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 
-#ingredients {
-  background-color: white;
-  box-sizing: border-box;
+#recipeColumns {
+  padding: 2vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ebe4d8;
+  padding-bottom: 6vh;
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.7);
 }
 
-#equipment {
-  background-color: white;
-  box-sizing: border-box;
+#recipeColumns div#ingredients { flex-basis: 28%; }
+#recipeColumns div#equipment { flex-basis: 20%; }
+#recipeColumns div#directions { flex-basis: 50%; }
+
+
+#footer,
+#footer a {
+  text-align: center;
+  color: #ebe4d8;
 }
 
-#directions {
-  background-color: white;
-  box-sizing: border-box;
-}
-
-#recipeColumns #ingredients ul,
-#recipeColumns #equipment ul,
-#recipeColumns #directions ol { 
-  display: none; 
-}
-
-#recipeColumns #ingredients.tpShow ul,
-#recipeColumns #equipment.tpShow ul,
-#recipeColumns #directions.tpShow ol {
-  display: block;
-  
+li {
+  font-family: Poppins;
 }
 
 @media (orientation: landscape) {
-  div {
-    width: calc(98vw/3);
+  #recipeColumns {
+    display: flex;
+    width: 98%;
+    flex-wrap: wrap;
+    flex-direction: row;
     float: left;
   }
 }
 @media screen and (orientation: portrait) and (max-width: 575px) {
   div#SteakBanner {
     height: 25vh;
+    position: center;
   }
-}
-li {
-  font-family: Poppins;
 }
